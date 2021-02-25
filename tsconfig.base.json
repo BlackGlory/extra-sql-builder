@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES2019"
+  , "module": "CommonJS"
+  , "strict": true
+  , "noUnusedLocals": false
+  , "noUnusedParameters": false
+  , "baseUrl": "."
+  , "paths": {
+      "@src/*": ["src/*"]
+    , "@values/*": ["src/values/*"]
+    , "@fragment-base": ["src/fragment-base"]
+    , "@fragments/*": ["src/fragments/*"]
+    , "@test/*": ["__tests__/*"]
+    }
+  }
+}
