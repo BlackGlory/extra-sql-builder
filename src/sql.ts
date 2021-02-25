@@ -1,3 +1,5 @@
-export function sql(...fragments: string[]): string {
-  return `${fragments.join('\n')};`
+import { Falsy, isntFalsy } from '@blackglory/types'
+
+export function sql(...fragments: Array<string | Falsy>): string {
+  return `${fragments.filter(isntFalsy).join('\n')};`
 }

@@ -67,6 +67,7 @@
     "typescript": "^4.2.2"
   },
   "dependencies": {
-    "@blackglory/errors": "^1.1.2"
+    "@blackglory/errors": "^1.1.2",
+    "@blackglory/types": "^0.2.18"
   }
 }

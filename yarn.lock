@@ -303,6 +303,15 @@
   resolved "https://registry.yarnpkg.com/@blackglory/errors/-/errors-1.1.2.tgz#0577f01ca13850049efa0dd729e1a26e77e1dc3a"
   integrity sha512-THXSkTUB5eXSn7Yj01TgizNqw2rRnkNj0t6drNtmGQNJRoh4qLdSD0WUiM6ClGgKTdaBJbAarRqG/6Gn/NjLig==
 
+"@blackglory/types@^0.2.17", "@blackglory/types@^0.2.18":
+  version "0.2.18"
+  resolved "https://registry.yarnpkg.com/@blackglory/types/-/types-0.2.18.tgz#2b117580083f97761bf5cbd55c0fe5517b99e2a9"
+  integrity sha512-1PcbODjHhIdLpySeUQ9Oy2qOR4pHQWbudruhfNt1xxf69p3vdlnxd8sZdspXZOSKas4Ysu8CD+RwgvB/kFvt9g==
+  dependencies:
+    "@types/node" "^14.14.31"
+    ajv "^7.1.1"
+    extra-dom "^0.2.12"
+
 "@cnakazawa/watch@^1.0.3":
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@cnakazawa/watch/-/watch-1.0.4.tgz#f864ae85004d0fcab6f50be9141c4da368d1656a"
@@ -894,7 +903,7 @@
   resolved "https://registry.yarnpkg.com/@types/minimist/-/minimist-1.2.1.tgz#283f669ff76d7b8260df8ab7a4262cc83d988256"
   integrity sha512-fZQQafSREFyuZcdWFAExYjBiCL7AUCdgsk80iO0q4yihYYdcIiH28CcuPTGFgLOCC8RlW49GSQxdHwZP+I7CNg==
 
-"@types/node@*":
+"@types/node@*", "@types/node@^14.14.31":
   version "14.14.31"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.31.tgz#72286bd33d137aa0d152d47ec7c1762563d34055"
   integrity sha512-vFHy/ezP5qI0rFgJ7aQnjDXwAMrG0KqqIH7tQG5PPv3BWBayOPIQNBjVc/P6hhdZfMx51REc6tfDNXHUio893g==
@@ -1071,7 +1080,7 @@ ajv@^6.10.0, ajv@^6.12.3, ajv@^6.12.4:
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
-ajv@^7.0.2:
+ajv@^7.0.2, ajv@^7.1.1:
   version "7.1.1"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-7.1.1.tgz#1e6b37a454021fa9941713f38b952fc1c8d32a84"
   integrity sha512-ga/aqDYnUy/o7vbsRTFhhTsNeXiYb5JWDIcRIeZfwRNCefwjNTVYCGdGSUrEmiu3yDK3vFvNbgJxvrQW4JXrYQ==
@@ -2378,6 +2387,14 @@ extglob@^2.0.4:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
+extra-dom@^0.2.12:
+  version "0.2.12"
+  resolved "https://registry.yarnpkg.com/extra-dom/-/extra-dom-0.2.12.tgz#2be1a6a482d7d8afe9c84d40dd9408482730c68d"
+  integrity sha512-7hTL+yRzpQZeeHhLTaWcUhwpimivFGiq0+Nrv3xfUeNeSuP00iNFHPI7dSLMmOiIEuRNSLuEd7M8xA8RvfmEoQ==
+  dependencies:
+    "@blackglory/types" "^0.2.17"
+    iterable-operator "^0.13.2"
+
 extsprintf@1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/extsprintf/-/extsprintf-1.3.0.tgz#96918440e3041a7a414f8c52e3c574eb3c3e1e05"
@@ -3303,6 +3320,13 @@ istanbul-reports@^3.0.2:
   dependencies:
     html-escaper "^2.0.0"
     istanbul-lib-report "^3.0.0"
+
+iterable-operator@^0.13.2:
+  version "0.13.3"
+  resolved "https://registry.yarnpkg.com/iterable-operator/-/iterable-operator-0.13.3.tgz#869d9f12113a54b316719fd5af21f3145dc4f79c"
+  integrity sha512-AL4PN+T5OfG9iySAdyWX8hsAEsSpAfd/ovPDGtm6O3UHHoydf3ToM2oCk23qRa7/9FC1rQ61qnNNVJaZ99b0SA==
+  dependencies:
+    "@blackglory/types" "^0.2.17"
 
 jest-changed-files@^26.6.2:
   version "26.6.2"

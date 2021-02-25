@@ -37,16 +37,16 @@ const result1 = sql(
 const result2 = sql(
  'INSERT INTO my_table (id, value)'
 , VALUES(
-    ['1', text('hello')],
-    cond && ['2', text('world')]
+    ['1', text('hello')]
+  , cond && ['2', text('world')]
   )
 )
 
 // or
 const result3 = `
   INSERT INTO my_table (id, value)
-  ${VALUES(['1', text('hello')],
-   cond && ['2', text('world')])};
+  ${VALUES(['1', text('hello')]
+  ,cond && ['2', text('world')])};
 `
 
 // or
