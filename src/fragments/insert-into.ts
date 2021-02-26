@@ -1,7 +1,8 @@
+import { Falsy, isntFalsy } from '@blackglory/types'
 import { FragmentBase } from '@fragment-base'
 
-export function INSERT_INTO(table: string, fields: string[]): InsertInto {
-  return new InsertInto(table, fields)
+export function INSERT_INTO(table: string, fields: Array<string | Falsy>): InsertInto {
+  return new InsertInto(table, fields.filter(isntFalsy))
 }
 
 export class InsertInto extends FragmentBase {

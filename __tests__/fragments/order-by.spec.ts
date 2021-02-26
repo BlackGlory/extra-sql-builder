@@ -1,3 +1,4 @@
+import { Falsy, isntFalsy } from '@blackglory/types'
 import { ORDER_BY, OrderBy } from '@fragments/order-by'
 
 describe('ORDER_BY(...fields: string[])', () => {
@@ -17,5 +18,12 @@ describe('ORDER_BY(...fields: string[])', () => {
       expect(result).toBeInstanceOf(OrderBy)
       expect(`${result}`).toBe('ORDER BY id1, id2')
     })
+  })
+
+  it('ignore falsy', () => {
+    const result = ORDER_BY('id1', null, 'id2')
+
+    expect(result).toBeInstanceOf(OrderBy)
+    expect(`${result}`).toBe('ORDER BY id1, id2')
   })
 })

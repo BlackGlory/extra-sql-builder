@@ -16,4 +16,11 @@ describe('GROUP_BY(...fields: string[]): GroupBy', () => {
     expect(result).toBeInstanceOf(GroupBy)
     expect(`${result}`).toBe('GROUP BY id1, id2')
   })
+
+  it('ignore falsy', () => {
+    const result = GROUP_BY('id1', null, 'id2')
+
+    expect(result).toBeInstanceOf(GroupBy)
+    expect(`${result}`).toBe('GROUP BY id1, id2')
+  })
 })
