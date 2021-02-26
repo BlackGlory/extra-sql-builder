@@ -1,3 +1,5 @@
+import { assert } from '@blackglory/errors'
+import { isntEmptyArray, isntEmptyString } from '@utils'
 import { Falsy, isntFalsy } from '@blackglory/types'
 import { FragmentBase } from '@fragment-base'
 
@@ -11,6 +13,9 @@ export class GroupBy extends FragmentBase {
   }
 
   build() {
+    assert(isntEmptyArray(this.fields))
+    assert(this.fields.every(isntEmptyString))
+
     return `GROUP BY ${this.fields.join(', ')}`
   }
 }

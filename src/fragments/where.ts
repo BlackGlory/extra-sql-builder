@@ -1,3 +1,5 @@
+import { assert } from '@blackglory/errors'
+import { isntEmptyString } from '@utils'
 import { FragmentBase } from '@fragment-base'
 
 export function WHERE(condition: string): Where {
@@ -10,6 +12,8 @@ export class Where extends FragmentBase {
   }
 
   build() {
+    assert(isntEmptyString(this.condition))
+
     return `WHERE ${this.condition}`
   }
 }

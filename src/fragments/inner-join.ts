@@ -1,3 +1,5 @@
+import { assert } from '@blackglory/errors'
+import { isntEmptyString } from '@utils'
 import { FragmentBase } from '@fragment-base'
 
 export function INNER_JOIN(table: string): InnerJoin {
@@ -10,6 +12,8 @@ export class InnerJoin extends FragmentBase {
   }
 
   build() {
+    assert(isntEmptyString(this.table))
+
     return `INNER JOIN ${this.table}`
   }
 }

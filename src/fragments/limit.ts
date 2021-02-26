@@ -1,3 +1,5 @@
+import { assert } from '@blackglory/errors'
+import { isntNegative } from '@utils'
 import { FragmentBase } from '@fragment-base'
 
 export function LIMIT(limit: number): Limit {
@@ -10,6 +12,9 @@ export class Limit extends FragmentBase {
   }
 
   build() {
+    assert(Number.isInteger(this.limit))
+    assert(isntNegative(this.limit))
+
     return `LIMIT ${this.limit}`
   }
 }

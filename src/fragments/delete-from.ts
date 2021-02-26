@@ -1,3 +1,5 @@
+import { isntEmptyString } from '@utils'
+import { assert } from '@blackglory/errors'
 import { FragmentBase } from '@fragment-base'
 
 export function DELETE_FROM(table: string): DeleteFrom {
@@ -10,6 +12,8 @@ export class DeleteFrom extends FragmentBase {
   }
 
   build() {
+    assert(isntEmptyString(this.table))
+
     return `DELETE FROM ${this.table}`
   }
 }

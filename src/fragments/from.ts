@@ -1,3 +1,5 @@
+import { assert } from '@blackglory/errors'
+import { isntEmptyArray, isntEmptyString } from '@utils'
 import { Falsy, isntFalsy } from '@blackglory/types'
 import { FragmentBase } from '@fragment-base'
 
@@ -11,6 +13,9 @@ export class From extends FragmentBase {
   }
 
   build(): string {
+    assert(isntEmptyArray(this.tables))
+    assert(this.tables.every(isntEmptyString))
+
     return `FROM ${this.tables.join(', ')}`
   }
 }

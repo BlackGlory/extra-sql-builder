@@ -1,3 +1,5 @@
+import { isntEmptyString } from '@utils'
+import { assert } from '@blackglory/errors'
 import { FragmentBase } from '@fragment-base'
 
 export function AND(condition: string): And {
@@ -10,6 +12,8 @@ export class And extends FragmentBase {
   }
 
   build(): string {
+    assert(isntEmptyString(this.condition))
+
     return `AND ${this.condition}`
   }
 }

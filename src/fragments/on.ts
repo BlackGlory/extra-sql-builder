@@ -1,3 +1,5 @@
+import { assert } from '@blackglory/errors'
+import { isntEmptyString } from '@utils'
 import { FragmentBase } from '@fragment-base'
 
 export function ON(condition: string): On {
@@ -10,6 +12,8 @@ export class On extends FragmentBase {
   }
 
   build() {
+    assert(isntEmptyString(this.condition))
+
     return `ON ${this.condition}`
   }
 }

@@ -1,3 +1,5 @@
+import { assert } from '@blackglory/errors'
+import { isntEmptyArray, isntEmptyString } from '@utils'
 import { Falsy, isntFalsy } from '@blackglory/types'
 import { FragmentBase } from '@fragment-base'
 
@@ -11,6 +13,10 @@ export class InsertInto extends FragmentBase {
   }
 
   build() {
+    assert(isntEmptyString(this.table))
+    assert(isntEmptyArray(this.fields))
+    assert(this.fields.every(isntEmptyString))
+
     return `INSERT INTO ${this.table} (${this.fields.join(', ')})`
   }
 }
