@@ -1,4 +1,4 @@
-export { sql } from '@src/sql'
+export * from '@src/sql'
 
 export { AND } from '@fragments/and'
 export { DELETE_FROM } from '@fragments/delete-from'
@@ -23,7 +23,7 @@ export { UPDATE } from '@fragments/update'
 export { VALUES } from '@fragments/values'
 export { WHERE } from '@fragments/where'
 
-export { text } from '@values/text'
-export { integer } from '@values/integer'
-export { boolean } from '@values/boolean'
-export { json } from '@values/json'
+export * from '@values/text'
+export * from '@values/integer'
+export * from '@values/boolean'
+export * from '@values/json'
