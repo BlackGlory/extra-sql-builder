@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.0](https://github.com/BlackGlory/extra-sql-builder/compare/v0.1.0...v0.2.0) (2021-02-26)
+
+
+### ⚠ BREAKING CHANGES
+
+* `boolean(val: unknown)` => `boolean(val: boolean)`
+
+### Features
+
+* add nullable values builder ([861e300](https://github.com/BlackGlory/extra-sql-builder/commit/861e3003bb43a605c2ba2a5dc3960b04bf58f116))
+
 ## 0.1.0 (2021-02-26)
 
 
