@@ -56,6 +56,13 @@ const result4 = `
   INSERT INTO my_table (id, value)
   ${values};
 `
+
+// or
+const result5 = sql`
+  INSERT INTO my_table (id, value)
+  VALUES (1, 'hello')
+  ${cond && `, (2, 'world')`};
+`
 ```
 
 ## What about SQL injection?
