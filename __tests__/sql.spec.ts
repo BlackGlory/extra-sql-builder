@@ -14,7 +14,7 @@ describe('sql(...fragments: Array<string | Falsy>): string', () => {
   })
 })
 
-describe('sql(strings: TemplateStringsArray, ...values: Array<string | Falsy>): string', () => {
+describe('sql(strings: TemplateStringsArray, ...values: unknown[]): string', () => {
   it('return string', () => {
     const result = sql`SELECT * ${'FROM my_table'};`
 

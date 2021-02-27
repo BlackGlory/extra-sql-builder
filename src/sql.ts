@@ -1,7 +1,7 @@
 import { Falsy, isntFalsy, isString } from '@blackglory/types'
 
 export function sql(...fragments: Array<string | Falsy>): string
-export function sql(strings: TemplateStringsArray, ...values: Array<string | Falsy>): string
+export function sql(strings: TemplateStringsArray, ...values: unknown[]): string
 export function sql(...args: unknown[]): string {
   if (isTemplateStringArray(args[0])) {
     const [strings, ...values] = args
