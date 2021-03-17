@@ -1,7 +1,8 @@
 import { assert } from '@blackglory/errors'
 import { isntEmptyArray, isntEmptyString } from '@utils'
-import { Falsy, isntFalsy } from '@blackglory/types'
+import { isntFalsy } from '@blackglory/types'
 import { FragmentBase } from '@fragment-base'
+import { Falsy } from 'justypes'
 
 export function SELECT(...fields: Array<string | Falsy>): Select {
   return new Select(fields.filter(isntFalsy))

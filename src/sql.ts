@@ -1,4 +1,5 @@
-import { Falsy, isntFalsy, isString } from '@blackglory/types'
+import { isntFalsy, isString } from '@blackglory/types'
+import { Falsy } from 'justypes'
 
 export function sql(...fragments: Array<string | Falsy>): string
 export function sql(strings: TemplateStringsArray, ...values: unknown[]): string

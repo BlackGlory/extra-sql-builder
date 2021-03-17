@@ -1,4 +1,3 @@
-import { Falsy, isntFalsy } from '@blackglory/types'
 import { ORDER_BY, OrderBy } from '@fragments/order-by'
 
 describe('ORDER_BY(...fields: string[])', () => {

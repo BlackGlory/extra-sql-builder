@@ -1,6 +1,7 @@
 import { assert } from '@blackglory/errors'
 import { isntEmptyArray, isntEmptyString } from '@utils'
-import { Falsy, isntFalsy } from '@blackglory/types'
+import { isntFalsy } from '@blackglory/types'
+import { Falsy } from 'justypes'
 import { FragmentBase } from '@fragment-base'
 
 export function INSERT_INTO(table: string, fields: Array<string | Falsy>): InsertInto {

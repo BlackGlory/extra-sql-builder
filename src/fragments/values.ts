@@ -1,7 +1,8 @@
 import { assert } from '@blackglory/errors'
 import { isntEmptyArray, isntEmptyString } from '@utils'
-import { Falsy, isntFalsy } from '@blackglory/types'
+import { isntFalsy } from '@blackglory/types'
 import { FragmentBase } from '@fragment-base'
+import { Falsy } from 'justypes'
 
 export function VALUES<T extends string[] | Falsy>(...values: [T, ...T[]]): Values {
   return new Values(values.filter(isntFalsy))
