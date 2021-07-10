@@ -1,12 +1,13 @@
 import { isntFalsy, isString } from '@blackglory/types'
 import { Falsy } from 'justypes'
+import { removeFalsyValues, toString } from 'extra-tags'
 
 export function sql(...fragments: Array<string | Falsy>): string
 export function sql(strings: TemplateStringsArray, ...values: unknown[]): string
 export function sql(...args: unknown[]): string {
   if (isTemplateStringArray(args[0])) {
     const [strings, ...values] = args
-    return concatTruthyStringsTag(strings, ...values)
+    return toString(...removeFalsyValues(strings, ...values))
   } else {
     return `${args.filter(isntFalsy).join('\n')};`
   }
@@ -14,20 +15,4 @@ export function sql(...args: unknown[]): string {
 
 function isTemplateStringArray(val: unknown): val is TemplateStringsArray {
   return Array.isArray(val) && val.every(isString)
-}
-
-function concatTruthyStringsTag(strings: TemplateStringsArray, ...values: unknown[]): string {
-  const result: string[] = []
-  for (let i = 0; i < values.length; i++) {
-    result.push(strings[i])
-
-    const value = values[i]
-    if (isntFalsy(value)) result.push(`${value}`)
-  }
-  result.push(last(strings))
-  return result.join('')
-}
-
-function last<T>(xs: ArrayLike<T>): T {
-  return xs[xs.length - 1]
 }
