@@ -519,12 +519,12 @@
   resolved "https://registry.yarnpkg.com/@blackglory/go/-/go-0.1.0.tgz#a145a98d17593549a91ed79766230f5c7719e1de"
   integrity sha512-p6kO5ThjCLRg3giGiaYhYcMZeA2akHAcCzjW7D5zz2YTJQ2JDKNzSk4WkKEFSpSiFcMzeNABN+tz1tasn4D2tg==
 
-"@blackglory/types@^0.4.6":
-  version "0.4.6"
-  resolved "https://registry.yarnpkg.com/@blackglory/types/-/types-0.4.6.tgz#5ec04d3539215e44737972045fd376a76b4d8e71"
-  integrity sha512-6FWCVNBWCBJ9Z6TA6PJ2gFFolo5M0w+xyZdCdNyEea/lbztC1NzR+yZjc52rPwY2xgiM9f152Ih/Eur3lUu1Hw==
+"@blackglory/types@^0.4.7":
+  version "0.4.7"
+  resolved "https://registry.yarnpkg.com/@blackglory/types/-/types-0.4.7.tgz#c704911ec8f8fa09c5c9b1f51d57c80f6aad1dc2"
+  integrity sha512-IVD3Tts/iKT/O69NzNIUrkYy69lp33KEWWYPB5ZlF0IUmJJBIB9cM3m67oYArbpXoCa0HZKaCFQBvqjX8TbS7A==
   dependencies:
-    justypes "^0.1.4"
+    justypes "^0.1.5"
 
 "@commitlint/cli@^12.1.4":
   version "12.1.4"
@@ -1077,6 +1077,11 @@
   integrity sha512-kSjgDMZONiIfSH1Nxcr5JIRMwUetDki63FSQfpTCz8ogF3Ulqm8+mr5f78dUYs6vMiB6gBusQqfQmBvHZj/lwg==
   dependencies:
     "@babel/types" "^7.3.0"
+
+"@types/common-tags@^1.8.1":
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/@types/common-tags/-/common-tags-1.8.1.tgz#a5a49ca5ebbb58e0f8947f3ec98950c8970a68a9"
+  integrity sha512-20R/mDpKSPWdJs5TOpz3e7zqbeCNuMCPhV7Yndk9KU2Rbij2r5W4RzwDPkzC+2lzUqXYu9rFzTktCBnDjHuNQg==
 
 "@types/estree@*":
   version "0.0.46"
@@ -1852,6 +1857,11 @@ commander@^2.20.0:
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.3.tgz#fd485e84c03eb4881c20722ba48035e8531aeb33"
   integrity sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==
 
+common-tags@^1.8.0:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/common-tags/-/common-tags-1.8.0.tgz#8e3153e542d4a39e9b10554434afaaf98956a937"
+  integrity sha512-6P6g0uetGpW/sdyUy/iQQCbFF0kWVMSIVSyYz7Zgjcgh8mgw8PQzDNZeyZ5DQ2gM7LBoZPHmnjz8rUthkBG5tw==
+
 commondir@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/commondir/-/commondir-1.0.1.tgz#ddd800da0c66127393cca5950ea968a3aaf1253b"
@@ -2613,11 +2623,13 @@ extglob@^2.0.4:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
-extra-tags@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/extra-tags/-/extra-tags-0.1.0.tgz#0f99d912500cde698ba9b1716a2b0318d5f131cc"
-  integrity sha512-8I8LjFmQUlpYUTt5w9GSrnTPwi6ditBMP4vXfK7A6WP/7Jr308Ir5geTig5GMCDfex8haHdVEyosTAOWToPX4g==
+extra-tags@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/extra-tags/-/extra-tags-0.2.0.tgz#4693acddc7fe54a2bd34c95ba8eea572e8837188"
+  integrity sha512-B4YABYY2IXbtyRjMdv+LhrvgRkzHk7OAPquFRrkuDVtRg47bO5k3lHh7rPOiKueeyzKfnwUEqCFJSY2uV7kgag==
   dependencies:
+    "@types/common-tags" "^1.8.1"
+    common-tags "^1.8.0"
     justypes "^0.1.5"
 
 fast-deep-equal@^3.1.1, fast-deep-equal@^3.1.3:
@@ -4089,11 +4101,6 @@ jsonparse@^1.2.0:
   resolved "https://registry.yarnpkg.com/jsonparse/-/jsonparse-1.3.1.tgz#3f4dae4a91fac315f71062f8521cc239f1366280"
   integrity sha1-P02uSpH6wxX3EGL4UhzCOfE2YoA=
 
-justypes@^0.1.4:
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/justypes/-/justypes-0.1.4.tgz#f6c4aeccf491008fc87adef96a14767ac54f2167"
-  integrity sha512-AZ35Bau1EmJjByG8A8LggpT+tqOj2XxWPIbtdoAoumwwnEBXKkLoyXuI/L0pSyx4uFqSyVoJPBFCcsL8FwP88g==
-
 justypes@^0.1.5:
   version "0.1.5"
   resolved "https://registry.yarnpkg.com/justypes/-/justypes-0.1.5.tgz#efa30b083b1cb59f9a8757dbc5f16a70ee48d83e"
@@ -5223,10 +5230,10 @@ rollup-plugin-terser@^7.0.2:
     serialize-javascript "^4.0.0"
     terser "^5.0.0"
 
-rollup@^2.53.0:
-  version "2.53.0"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.53.0.tgz#5b6bc7820a03f361d2ae3dcabdc99d269a754709"
-  integrity sha512-spgrY78Toh+m0+zaOoeaayJKuzFuWy6o1PdFIBMVwRcuxT0xCOX9A5rChyKe+2ruL4lePKWUMImS4mMW1QAkmQ==
+rollup@^2.53.1:
+  version "2.53.1"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.53.1.tgz#b60439efd1eb41bdb56630509bd99aae78b575d3"
+  integrity sha512-yiTCvcYXZEulNWNlEONOQVlhXA/hgxjelFSjNcrwAAIfYx/xqjSHwqg/cCaWOyFRKr+IQBaXwt723m8tCaIUiw==
   optionalDependencies:
     fsevents "~2.3.2"
 
