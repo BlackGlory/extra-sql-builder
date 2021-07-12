@@ -71,7 +71,7 @@
   "dependencies": {
     "@blackglory/errors": "^1.1.2",
     "@blackglory/types": "^0.4.7",
-    "extra-tags": "^0.2.0",
+    "extra-tags": "^0.2.2",
     "justypes": "^0.1.5"
   }
 }
