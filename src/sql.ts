@@ -1,4 +1,4 @@
-import { isntFalsy, isString } from '@blackglory/types'
+import { isArray, isntFalsy, isString } from '@blackglory/types'
 import { Falsy } from 'justypes'
 import { removeFalsyValues, dedent } from 'extra-tags'
 
@@ -14,5 +14,5 @@ export function sql(...args: unknown[]): string {
 }
 
 function isTemplateStringArray(val: unknown): val is TemplateStringsArray {
-  return Array.isArray(val) && val.every(isString)
+  return isArray(val) && val.every(isString)
 }
