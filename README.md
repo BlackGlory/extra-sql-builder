@@ -1,7 +1,5 @@
 # extra-sql-builder
-
 ## Install
-
 ```sh
 npm install --save extra-sql-builder
 # or
@@ -9,14 +7,12 @@ yarn add extra-sql-builder
 ```
 
 ## Motivation
-
 It is difficult to create SQLs dynamically:
 - Concatenating strings is ugly
 - Traditional SQL Builders are not intuitive.
 - ORMs are not intuitive, and have poor performance.
 
 ## Usage
-
 ```ts
 import { INSERT_INTO, VALUES, text, sql } from 'extra-sql-builder'
 
@@ -52,8 +48,10 @@ const result3 = sql`
 // or
 const result4 = `
   INSERT INTO my_table (id, value)
-  ${VALUES(['1', text('hello')]
-  , cond && ['2', text('world')])};
+  ${VALUES(
+    ['1', text('hello')]
+  , cond && ['2', text('world')]
+  )};
 `
 
 // or
@@ -66,10 +64,8 @@ const result5 = `
   INSERT INTO my_table (id, value)
   ${values};
 `
-
 ```
 
 ## What about SQL injection?
-
 As long as you don't take user input as a parameter,
 there will be no SQL injection vulnerability.
