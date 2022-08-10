@@ -12,7 +12,7 @@ export class RightOuterJoin extends FragmentBase {
   }
 
   build() {
-    assert(isntEmptyString(this.table))
+    assert(isntEmptyString(this.table), 'table should not be an empty string')
 
     return `RIGHT OUTER JOIN ${this.table}`
   }

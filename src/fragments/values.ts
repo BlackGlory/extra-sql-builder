@@ -14,9 +14,12 @@ export class Values extends FragmentBase {
   }
 
   build() {
-    assert(isntEmptyArray(this.values))
-    assert(this.values.every(isntEmptyArray))
-    assert(this.values.every(xs => xs.every(isntEmptyString)))
+    assert(isntEmptyArray(this.values), 'values should not be empty')
+    assert(this.values.every(isntEmptyArray), 'values should not contain empty arries')
+    assert(
+      this.values.every(xs => xs.every(isntEmptyString))
+    , 'values should not contain empty strings'
+    )
 
     return `VALUES ${this.values.map(x => `(${x.join(', ')})`).join(', ')}`
   }

@@ -12,8 +12,8 @@ export class Offset extends FragmentBase {
   }
 
   build() {
-    assert(Number.isInteger(this.offset))
-    assert(isntNegative(this.offset))
+    assert(Number.isInteger(this.offset), 'offset should be an integer')
+    assert(isntNegative(this.offset), 'offset should be positive')
 
     return `OFFSET ${this.offset}`
   }

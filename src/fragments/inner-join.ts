@@ -12,7 +12,7 @@ export class InnerJoin extends FragmentBase {
   }
 
   build() {
-    assert(isntEmptyString(this.table))
+    assert(isntEmptyString(this.table), 'table should not be an empty string')
 
     return `INNER JOIN ${this.table}`
   }

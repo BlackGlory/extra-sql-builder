@@ -12,7 +12,7 @@ export class And extends FragmentBase {
   }
 
   build(): string {
-    assert(isntEmptyString(this.condition))
+    assert(isntEmptyString(this.condition), 'condition should not be an empty string')
 
     return `AND ${this.condition}`
   }

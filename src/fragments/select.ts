@@ -14,8 +14,8 @@ export class Select extends FragmentBase {
   }
 
   build() {
-    assert(isntEmptyArray(this.fields))
-    assert(this.fields.every(isntEmptyString))
+    assert(isntEmptyArray(this.fields), 'fields should not be empty')
+    assert(this.fields.every(isntEmptyString), 'fields should not contain empty strings')
 
     return `SELECT ${this.fields.join(', ')}`
   }

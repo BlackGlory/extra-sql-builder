@@ -12,7 +12,7 @@ export class Where extends FragmentBase {
   }
 
   build() {
-    assert(isntEmptyString(this.condition))
+    assert(isntEmptyString(this.condition), 'condition should not be an empty string')
 
     return `WHERE ${this.condition}`
   }

@@ -14,8 +14,8 @@ export class From extends FragmentBase {
   }
 
   build(): string {
-    assert(isntEmptyArray(this.tables))
-    assert(this.tables.every(isntEmptyString))
+    assert(isntEmptyArray(this.tables), 'tables should not be an empty array')
+    assert(this.tables.every(isntEmptyString), 'tables should not contain empty strings')
 
     return `FROM ${this.tables.join(', ')}`
   }

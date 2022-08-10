@@ -12,7 +12,7 @@ export class LeftOuterJoin extends FragmentBase {
   }
 
   build() {
-    assert(isntEmptyString(this.table))
+    assert(isntEmptyString(this.table), 'table should not be an emtpy string')
 
     return `LEFT OUTER JOIN ${this.table}`
   }

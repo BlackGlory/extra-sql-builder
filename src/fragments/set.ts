@@ -12,8 +12,8 @@ export class Set extends FragmentBase {
   }
 
   build() {
-    assert(isntEmptyArray(this.statements))
-    assert(this.statements.every(isntEmptyString))
+    assert(isntEmptyArray(this.statements), 'statements should not be empty')
+    assert(this.statements.every(isntEmptyString), 'statements should not contain empty strings')
 
     return `SET ${this.statements.join(', ')}`
   }

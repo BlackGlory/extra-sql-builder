@@ -12,8 +12,8 @@ export class Limit extends FragmentBase {
   }
 
   build() {
-    assert(Number.isInteger(this.limit))
-    assert(isntNegative(this.limit))
+    assert(Number.isInteger(this.limit), 'limit should be an integer')
+    assert(isntNegative(this.limit), 'limit should be positive')
 
     return `LIMIT ${this.limit}`
   }

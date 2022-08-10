@@ -14,9 +14,9 @@ export class InsertInto extends FragmentBase {
   }
 
   build() {
-    assert(isntEmptyString(this.table))
-    assert(isntEmptyArray(this.fields))
-    assert(this.fields.every(isntEmptyString))
+    assert(isntEmptyString(this.table), 'table should not be an empty string')
+    assert(isntEmptyArray(this.fields), 'fields should not be empty')
+    assert(this.fields.every(isntEmptyString), 'fields should not contain empty strings')
 
     return `INSERT INTO ${this.table} (${this.fields.join(', ')})`
   }
