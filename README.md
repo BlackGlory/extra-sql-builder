@@ -43,26 +43,30 @@ const result2 = sql(
 )
 
 // or
-const result3 = `
-  INSERT INTO my_table (id, value)
-  ${VALUES(['1', text('hello')]
-  ,cond && ['2', text('world')])};
-`
-
-// or
-const values = VALUES(['1', text('hello')])
-if (cond) values.values.push(['2', text('world')])
-const result4 = `
-  INSERT INTO my_table (id, value)
-  ${values};
-`
-
-// or
-const result5 = sql`
+const result3 = sql`
   INSERT INTO my_table (id, value)
   VALUES (1, 'hello')
   ${cond && `, (2, 'world')`};
 `
+
+// or
+const result4 = `
+  INSERT INTO my_table (id, value)
+  ${VALUES(['1', text('hello')]
+  , cond && ['2', text('world')])};
+`
+
+// or
+const values = VALUES(['1', text('hello')])
+if (cond) {
+  values.values.push(['2', text('world')])
+}
+
+const result5 = `
+  INSERT INTO my_table (id, value)
+  ${values};
+`
+
 ```
 
 ## What about SQL injection?
