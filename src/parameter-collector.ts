@@ -15,6 +15,10 @@ export class ParameterCollector<T> {
     return fromPairs(entries)
   }
 
+  toArray(): T[] {
+    return [...this.values]
+  }
+
   private createKey(index: number): string {
     return `${this.prefix}${index}`
   }

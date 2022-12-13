@@ -81,11 +81,14 @@ class ParameterCollector<T> {
 
   add(value: T): string
   toRecord(): Record<string, T>
+  toArray(): T[]
 }
 ```
 
+#### Examples
+##### Named parameters
 ```ts
-const collector = new ParameterCollector('param')
+const collector = new ParameterCollector('$param')
 
 query(
   sql`
@@ -93,7 +96,32 @@ query(
     VALUES (${collector.add(123)})
          , (${collector.add(456)})
   `
+  // INSERT INTO table (value)
+  // VALUES ($param1)
+  //      , ($param2)
 , collector.toRecord()
+  // {
+  //   param1: 123
+  // , param2: 456
+  // }
+)
+```
+
+##### Indexed parameters
+```ts
+const collector = new ParameterCollector('$')
+
+query(
+  sql`
+    INSERT INTO table (value)
+    VALUES (${collector.add(123)})
+         , (${collector.add(456)})
+  `
+  // INSERT INTO table (value)
+  // VALUES ($1)
+  //      , ($2)
+, collector.toArray()
+  // [123, 456]
 )
 ```
 

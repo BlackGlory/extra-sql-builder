@@ -23,4 +23,14 @@ describe('ParameterCollector', () => {
     , foo2: 'world'
     })
   })
+
+  test('toArray', () => {
+    const collector = new ParameterCollector<string>('foo')
+    collector.add('hello')
+    collector.add('world')
+
+    const result = collector.toArray()
+
+    expect(result).toStrictEqual(['hello', 'world'])
+  })
 })
