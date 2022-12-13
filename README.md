@@ -128,16 +128,16 @@ query(
 ### Values
 ```ts
 function boolean(val: boolean): string
-function nullableBoolean(val: boolean | null | undefined): string
+function nullableBoolean(val: Nullable<boolean>): string
 
 function integer(val: number): string
-function nullableInteger(val: number | null | undefined): string
+function nullableInteger(val: Nullable<number>): string
 
 function json(val: object): string
-function nullableJson(val: object | null | undefined): string
+function nullableJson(val: Nullable<object>): string
 
 function text(val: string): string
-function nullableText(val: string | null | undefined): string
+function nullableText(val: Nullable<string>): string
 ```
 
 ### Fragments

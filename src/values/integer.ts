@@ -1,4 +1,4 @@
-import { isNull, isUndefined } from '@blackglory/prelude'
+import { isNullish, Nullable } from '@blackglory/prelude'
 import { assert } from '@blackglory/prelude'
 
 export function integer(val: number): string {
@@ -7,10 +7,8 @@ export function integer(val: number): string {
   return `${val}`
 }
 
-export function nullableInteger(val: number | null | undefined): string {
-  if (isNull(val) || isUndefined(val)) {
-    return 'NULL'
-  } else {
-    return integer(val)
-  }
+export function nullableInteger(val: Nullable<number>): string {
+  return isNullish(val)
+       ? 'NULL'
+       : integer(val)
 }

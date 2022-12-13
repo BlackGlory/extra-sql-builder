@@ -1,13 +1,11 @@
-import { isNull, isUndefined } from '@blackglory/prelude'
+import { isNullish, Nullable } from '@blackglory/prelude'
 
 export function boolean(val: boolean): string {
   return val ? '1' : '0'
 }
 
-export function nullableBoolean(val: boolean | null | undefined): string {
-  if (isNull(val) || isUndefined(val)) {
-    return 'NULL'
-  } else {
-    return boolean(val)
-  }
+export function nullableBoolean(val: Nullable<boolean>): string {
+  return isNullish(val)
+       ? 'NULL'
+       : boolean(val)
 }
