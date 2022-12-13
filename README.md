@@ -84,6 +84,19 @@ class ParameterCollector<T> {
 }
 ```
 
+```ts
+const collector = new ParameterCollector('param')
+
+query(
+  sql`
+    INSERT INTO table (value)
+    VALUES (${collector.add(123)})
+         , (${collector.add(456)})
+  `
+, collector.toRecord()
+)
+```
+
 ### Values
 ```ts
 function boolean(val: boolean): string
