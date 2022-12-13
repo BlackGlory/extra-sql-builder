@@ -1,19 +1,8 @@
-import { assert } from '@blackglory/errors'
-import { isntEmptyString } from '@utils'
-import { FragmentBase } from './fragment-base'
+import { assert } from '@blackglory/prelude'
+import { isntEmptyString } from '@src/utils'
 
-export function INTO(table: string): Into {
-  return new Into(table)
-}
+export function INTO(table: string): string {
+  assert(isntEmptyString(table), 'table should not be an empty string')
 
-export class Into extends FragmentBase {
-  constructor(public table: string) {
-    super()
-  }
-
-  build() {
-    assert(isntEmptyString(this.table), 'table should not be an empty string')
-
-    return `INTO ${this.table}`
-  }
+  return `INTO ${table}`
 }

@@ -2,9 +2,9 @@ import { getError } from 'return-style'
 import { AssertionError } from '@blackglory/errors'
 import { integer, nullableInteger } from '@values/integer'
 
-describe('integer(val: number): string', () => {
+describe('integer', () => {
   describe('is integer', () => {
-    it('return string', () => {
+    it('returns string', () => {
       const result = integer(1)
 
       expect(result).toBe('1')
@@ -12,7 +12,7 @@ describe('integer(val: number): string', () => {
   })
 
   describe('isnt integer', () => {
-    it('throw AssertionError', () => {
+    it('throws AssertionError', () => {
       const err = getError(() => integer(1.5))
 
       expect(err).toBeInstanceOf(AssertionError)
@@ -20,9 +20,9 @@ describe('integer(val: number): string', () => {
   })
 })
 
-describe('nullableInteger(val: number | null | undefined): string', () => {
+describe('nullableInteger', () => {
   describe('integer', () => {
-    it('return string', () => {
+    it('returns string', () => {
       const result = nullableInteger(1)
 
       expect(result).toBe('1')
@@ -30,7 +30,7 @@ describe('nullableInteger(val: number | null | undefined): string', () => {
   })
 
   describe('null', () => {
-    it('return NULL', () => {
+    it('returns NULL', () => {
       const result = nullableInteger(null)
 
       expect(result).toBe('NULL')
@@ -38,7 +38,7 @@ describe('nullableInteger(val: number | null | undefined): string', () => {
   })
 
   describe('undefined', () => {
-    it('return NULL', () => {
+    it('returns NULL', () => {
       const result = nullableInteger(undefined)
 
       expect(result).toBe('NULL')

@@ -1,26 +1,15 @@
-import { assert } from '@blackglory/errors'
-import { isntEmptyArray, isntEmptyString } from '@utils'
-import { isntFalsy } from '@blackglory/types'
-import { FragmentBase } from './fragment-base'
-import { Falsy } from 'justypes'
+import { assert, isntFalsy, Falsy } from '@blackglory/prelude'
+import { isntEmptyArray, isntEmptyString } from '@src/utils'
 
-export function VALUES<T extends string[] | Falsy>(...values: [T, ...T[]]): Values {
-  return new Values(values.filter(isntFalsy))
-}
+export function VALUES<T extends string[] | Falsy>(...values: [T, ...T[]]): string {
+  const truthyValues = values.filter(isntFalsy)
 
-export class Values extends FragmentBase {
-  constructor(public values: string[][]) {
-    super()
-  }
+  assert(isntEmptyArray(truthyValues), 'values should not be empty')
+  assert(truthyValues.every(isntEmptyArray), 'values should not contain empty arries')
+  assert(
+    truthyValues.every(xs => xs.every(isntEmptyString))
+  , 'values should not contain empty strings'
+  )
 
-  build() {
-    assert(isntEmptyArray(this.values), 'values should not be empty')
-    assert(this.values.every(isntEmptyArray), 'values should not contain empty arries')
-    assert(
-      this.values.every(xs => xs.every(isntEmptyString))
-    , 'values should not contain empty strings'
-    )
-
-    return `VALUES ${this.values.map(x => `(${x.join(', ')})`).join(', ')}`
-  }
+  return `VALUES ${truthyValues.map(x => `(${x.join(', ')})`).join(', ')}`
 }

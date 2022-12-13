@@ -101,28 +101,28 @@ function nullableText(val: string | null | undefined): string
 
 ### Fragments
 ```ts
-function AND(condition: string): And
-function DELETE_FROM(table: string): DeleteFrom
-function FROM(...tables: Array<string | Falsy>): From
-function FULL_OUTER_JOIN(table: string): FullOuterJoin
-function GROUP_BY(...fields: Array<string | Falsy>): GroupBy
-function HAVING(condition: string): Having
-function INNER_JOIN(table: string): InnerJoin
-function INSERT_INTO(table: string, fields: Array<string | Falsy>): InsertInto
-function INTO(table: string): Into
-function LEFT_OUTER_JOIN(table: string): LeftOuterJoin
-function LIMIT(limit: number): Limit
-function OFFSET(offset: number): Offset
-function ON(condition: string): On
-function OR(condition: string): Or
-function ORDER_BY(...fields: Array<string | Falsy>): OrderBy
-function RIGHT_OUTER_JOIN(table: string): RightOuterJoin
-function SELECT(...fields: Array<string | Falsy>): Select
-function SET(...statements: string[]): Set
-function UNION(all: unknown = false): Union
-function UPDATE(table: string): Update
-function VALUES<T extends string[] | Falsy>(...values: [T, ...T[]]): Values
-function WHERE(condition: string): Where
+function AND(condition: string): string
+function DELETE_FROM(table: string): string
+function FROM(...tables: Array<string | Falsy>): string
+function FULL_OUTER_JOIN(table: string): string
+function GROUP_BY(...fields: Array<string | Falsy>): string
+function HAVING(condition: string): string
+function INNER_JOIN(table: string): string
+function INSERT_INTO(table: string, fields: Array<string | Falsy>): string
+function INTO(table: string): string
+function LEFT_OUTER_JOIN(table: string): string
+function LIMIT(limit: number): string
+function OFFSET(offset: number): string
+function ON(condition: string): string
+function OR(condition: string): string
+function ORDER_BY(...fields: Array<string | Falsy>): string
+function RIGHT_OUTER_JOIN(table: string): string
+function SELECT(...fields: Array<string | Falsy>): string
+function SET(...statements: string[]): string
+function UNION(all: unknown = false): string
+function UPDATE(table: string): string
+function VALUES<T extends string[] | Falsy>(...values: [T, ...T[]]): string
+function WHERE(condition: string): string
 ```
 
 ## FAQ

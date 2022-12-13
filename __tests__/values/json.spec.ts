@@ -1,16 +1,16 @@
 import { json, nullableJson } from '@values/json'
 
-describe('json(val: object): string', () => {
-  it('return string', () => {
+describe('json', () => {
+  it('returns string', () => {
     const result = json({ lookUpAtTheSky: "Don't tell me you don't see it" })
 
     expect(result).toBe(`'{"lookUpAtTheSky":"Don''t tell me you don''t see it"}'`)
   })
 })
 
-describe('nullableJson(val: object | null | undefined): string', () => {
+describe('nullableJson', () => {
   describe('object', () => {
-    it('return string', () => {
+    it('returns string', () => {
       const result = json({ lookUpAtTheSky: "Don't tell me you don't see it" })
 
       expect(result).toBe(`'{"lookUpAtTheSky":"Don''t tell me you don''t see it"}'`)
@@ -18,7 +18,7 @@ describe('nullableJson(val: object | null | undefined): string', () => {
   })
 
   describe('null', () => {
-    it('return NULL', () => {
+    it('returns NULL', () => {
       const result = nullableJson(null)
 
       expect(result).toBe('NULL')
@@ -26,7 +26,7 @@ describe('nullableJson(val: object | null | undefined): string', () => {
   })
 
   describe('undefined', () => {
-    it('return NULL', () => {
+    it('returns NULL', () => {
       const result = nullableJson(undefined)
 
       expect(result).toBe('NULL')

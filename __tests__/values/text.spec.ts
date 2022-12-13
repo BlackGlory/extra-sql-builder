@@ -1,8 +1,8 @@
 import { text, nullableText } from '@values/text'
 
-describe('text(val: string): string', () => {
+describe('text', () => {
   describe('text without single quote', () => {
-    it('return string', () => {
+    it('returns string', () => {
       const result = text('hello world')
 
       expect(result).toBe(`'hello world'`)
@@ -10,7 +10,7 @@ describe('text(val: string): string', () => {
   })
 
   describe('text with single quote', () => {
-    it('return string', () => {
+    it('returns string', () => {
       const result = text(`'hello world'`)
 
       expect(result).toBe(`'''hello world'''`)
@@ -18,9 +18,9 @@ describe('text(val: string): string', () => {
   })
 })
 
-describe('nullableText(val: string | null | undefined): string', () => {
+describe('nullableText', () => {
   describe('string', () => {
-    it('return string', () => {
+    it('returns string', () => {
       const result = text('hello world')
 
       expect(result).toBe(`'hello world'`)
@@ -28,7 +28,7 @@ describe('nullableText(val: string | null | undefined): string', () => {
   })
 
   describe('null', () => {
-    it('return NULL', () => {
+    it('returns NULL', () => {
       const result = nullableText(null)
 
       expect(result).toBe('NULL')
@@ -36,7 +36,7 @@ describe('nullableText(val: string | null | undefined): string', () => {
   })
 
   describe('undefined', () => {
-    it('return NULL', () => {
+    it('returns NULL', () => {
       const result = nullableText(undefined)
 
       expect((result)).toBe('NULL')

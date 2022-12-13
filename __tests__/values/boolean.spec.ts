@@ -1,8 +1,8 @@
 import { boolean, nullableBoolean } from '@values/boolean'
 
-describe('boolean(val: boolean): string', () => {
+describe('boolean', () => {
   describe('true', () => {
-    it('return 1', () => {
+    it('returns 1', () => {
       const result = boolean(true)
 
       expect(result).toBe('1')
@@ -10,7 +10,7 @@ describe('boolean(val: boolean): string', () => {
   })
 
   describe('false', () => {
-    it('return 0', () => {
+    it('returns 0', () => {
       const result = boolean(false)
 
       expect(result).toBe('0')
@@ -18,9 +18,9 @@ describe('boolean(val: boolean): string', () => {
   })
 })
 
-describe('nullableBoolean(val: boolean | null | undefined): string', () => {
+describe('nullableBoolean', () => {
   describe('boolean', () => {
-    it('return string', () => {
+    it('returns string', () => {
       const result = nullableBoolean(false)
 
       expect(result).toBe('0')
@@ -28,7 +28,7 @@ describe('nullableBoolean(val: boolean | null | undefined): string', () => {
   })
 
   describe('null', () => {
-    it('return NULL', () => {
+    it('returns NULL', () => {
       const result = nullableBoolean(null)
 
       expect(result).toBe('NULL')
@@ -37,7 +37,7 @@ describe('nullableBoolean(val: boolean | null | undefined): string', () => {
   })
 
   describe('undefined', () => {
-    it('return NULL', () => {
+    it('returns NULL', () => {
       const result = nullableBoolean(undefined)
 
       expect(result).toBe('NULL')

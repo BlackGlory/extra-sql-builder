@@ -1,19 +1,8 @@
-import { assert } from '@blackglory/errors'
-import { isntEmptyString } from '@utils'
-import { FragmentBase } from './fragment-base'
+import { assert } from '@blackglory/prelude'
+import { isntEmptyString } from '@src/utils'
 
-export function HAVING(condition: string): Having {
-  return new Having(condition)
-}
+export function HAVING(condition: string): string {
+  assert(isntEmptyString(condition), 'condition should not be an empty string')
 
-export class Having extends FragmentBase {
-  constructor(public condition: string) {
-    super()
-  }
-
-  build() {
-    assert(isntEmptyString(this.condition), 'condition should not be an empty string')
-
-    return `HAVING ${this.condition}`
-  }
+  return `HAVING ${condition}`
 }

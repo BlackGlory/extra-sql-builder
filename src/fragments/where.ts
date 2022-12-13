@@ -1,19 +1,8 @@
-import { assert } from '@blackglory/errors'
-import { isntEmptyString } from '@utils'
-import { FragmentBase } from './fragment-base'
+import { assert } from '@blackglory/prelude'
+import { isntEmptyString } from '@src/utils'
 
-export function WHERE(condition: string): Where {
-  return new Where(condition)
-}
+export function WHERE(condition: string): string {
+  assert(isntEmptyString(condition), 'condition should not be an empty string')
 
-export class Where extends FragmentBase {
-  constructor(public condition: string) {
-    super()
-  }
-
-  build() {
-    assert(isntEmptyString(this.condition), 'condition should not be an empty string')
-
-    return `WHERE ${this.condition}`
-  }
+  return `WHERE ${condition}`
 }

@@ -1,4 +1,4 @@
-import { isNull, isUndefined } from '@blackglory/types'
+import { isNull, isUndefined } from '@blackglory/prelude'
 import { text } from '@values/text'
 
 export function json(val: object): string {

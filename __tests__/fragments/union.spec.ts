@@ -1,21 +1,15 @@
-import { UNION, Union } from '@fragments/union'
+import { UNION } from '@fragments/union'
 
-describe('UNION(all: unknown = false): Union', () => {
-  describe('all = true', () => {
-    it('return Union', () => {
-       const result = UNION('ALL')
+describe('UNION', () => {
+  test('all = true', () => {
+    const result = UNION('ALL')
 
-       expect(result).toBeInstanceOf(Union)
-       expect(`${result}`).toBe('UNION ALL')
-    })
+    expect(result).toBe('UNION ALL')
   })
 
-  describe('all = false', () => {
-    it('return Union', () => {
-      const result = UNION()
+  test('all = false', () => {
+    const result = UNION()
 
-      expect(result).toBeInstanceOf(Union)
-      expect(`${result}`).toBe('UNION')
-    })
+    expect(result).toBe('UNION')
   })
 })

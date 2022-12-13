@@ -1,19 +1,8 @@
-import { isntEmptyString } from '@utils'
-import { assert } from '@blackglory/errors'
-import { FragmentBase } from './fragment-base'
+import { isntEmptyString } from '@src/utils'
+import { assert } from '@blackglory/prelude'
 
-export function AND(condition: string): And {
-  return new And(condition)
-}
+export function AND(condition: string): string {
+  assert(isntEmptyString(condition), 'condition should not be an empty string')
 
-export class And extends FragmentBase {
-  constructor(public condition: string) {
-    super()
-  }
-
-  build(): string {
-    assert(isntEmptyString(this.condition), 'condition should not be an empty string')
-
-    return `AND ${this.condition}`
-  }
+  return `AND ${condition}`
 }

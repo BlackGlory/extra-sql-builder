@@ -1,10 +1,7 @@
-import { UPDATE, Update } from '@fragments/update'
+import { UPDATE } from '@fragments/update'
 
-describe('UPDATE(table: string): Update', () => {
-  it('return Update', () => {
-    const result = UPDATE('my_table')
+test('UPDATE', () => {
+  const result = UPDATE('my_table')
 
-    expect(result).toBeInstanceOf(Update)
-    expect(`${result}`).toBe('UPDATE my_table')
-  })
+  expect(result).toBe('UPDATE my_table')
 })

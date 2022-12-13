@@ -1,4 +1,4 @@
-import { isNull, isUndefined } from '@blackglory/types'
+import { isNull, isUndefined } from '@blackglory/prelude'
 
 export function text(val: string): string {
   return `'${val.replace(/'/g, "''")}'`

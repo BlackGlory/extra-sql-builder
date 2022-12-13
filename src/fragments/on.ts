@@ -1,19 +1,8 @@
-import { assert } from '@blackglory/errors'
-import { isntEmptyString } from '@utils'
-import { FragmentBase } from './fragment-base'
+import { assert } from '@blackglory/prelude'
+import { isntEmptyString } from '@src/utils'
 
-export function ON(condition: string): On {
-  return new On(condition)
-}
+export function ON(condition: string): string {
+  assert(isntEmptyString(condition), 'condition should not be an empty string')
 
-export class On extends FragmentBase {
-  constructor(public condition: string) {
-    super()
-  }
-
-  build() {
-    assert(isntEmptyString(this.condition), 'condition should not be an empty string')
-
-    return `ON ${this.condition}`
-  }
+  return `ON ${condition}`
 }

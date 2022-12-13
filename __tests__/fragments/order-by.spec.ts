@@ -1,28 +1,21 @@
-import { ORDER_BY, OrderBy } from '@fragments/order-by'
+import { ORDER_BY } from '@fragments/order-by'
 
-describe('ORDER_BY(...fields: string[])', () => {
-  describe('one field', () => {
-    it('return OrderBy', () => {
-      const result = ORDER_BY('id')
+describe('ORDER_BY', () => {
+  test('one field', () => {
+    const result = ORDER_BY('id')
 
-      expect(result).toBeInstanceOf(OrderBy)
-      expect(`${result}`).toBe('ORDER BY id')
-    })
+    expect(result).toBe('ORDER BY id')
   })
 
-  describe('more than one field', () => {
-    it('return OrderBy', () => {
-      const result = ORDER_BY('id1', 'id2')
+  test('more than one field', () => {
+    const result = ORDER_BY('id1', 'id2')
 
-      expect(result).toBeInstanceOf(OrderBy)
-      expect(`${result}`).toBe('ORDER BY id1, id2')
-    })
+    expect(result).toBe('ORDER BY id1, id2')
   })
 
-  it('ignore falsy', () => {
+  test('ignore falsy', () => {
     const result = ORDER_BY('id1', null, 'id2')
 
-    expect(result).toBeInstanceOf(OrderBy)
-    expect(`${result}`).toBe('ORDER BY id1, id2')
+    expect(result).toBe('ORDER BY id1, id2')
   })
 })

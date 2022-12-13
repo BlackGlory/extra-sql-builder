@@ -1,10 +1,7 @@
-import { OR, Or } from '@fragments/or'
+import { OR } from '@fragments/or'
 
-describe('OR(condition: string): Or', () => {
-  it('return Or', () => {
-    const result = OR(`id = 'id'`)
+test('OR', () => {
+  const result = OR(`id = 'id'`)
 
-    expect(result).toBeInstanceOf(Or)
-    expect(`${result}`).toBe(`OR id = 'id'`)
-  })
+  expect(result).toBe(`OR id = 'id'`)
 })

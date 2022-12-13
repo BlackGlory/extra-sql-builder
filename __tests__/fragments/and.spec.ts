@@ -1,10 +1,7 @@
-import { AND, And } from '@fragments/and'
+import { AND } from '@fragments/and'
 
-describe('AND(condition: string) => And', () => {
-  it('return And', () => {
-    const result = AND(`id = 'test'`)
+test('AND', () => {
+  const result = AND(`id = 'test'`)
 
-    expect(result).toBeInstanceOf(And)
-    expect(`${result}`).toBe(`AND id = 'test'`)
-  })
+  expect(result).toBe(`AND id = 'test'`)
 })

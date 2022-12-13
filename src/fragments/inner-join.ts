@@ -1,19 +1,8 @@
-import { assert } from '@blackglory/errors'
-import { isntEmptyString } from '@utils'
-import { FragmentBase } from './fragment-base'
+import { assert } from '@blackglory/prelude'
+import { isntEmptyString } from '@src/utils'
 
-export function INNER_JOIN(table: string): InnerJoin {
-  return new InnerJoin(table)
-}
+export function INNER_JOIN(table: string): string {
+  assert(isntEmptyString(table), 'table should not be an empty string')
 
-export class InnerJoin extends FragmentBase {
-  constructor(public table: string) {
-    super()
-  }
-
-  build() {
-    assert(isntEmptyString(this.table), 'table should not be an empty string')
-
-    return `INNER JOIN ${this.table}`
-  }
+  return `INNER JOIN ${table}`
 }

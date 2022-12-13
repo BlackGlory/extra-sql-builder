@@ -1,26 +1,21 @@
-import { GROUP_BY, GroupBy } from '@fragments/group-by'
+import { GROUP_BY } from '@fragments/group-by'
 
-describe('GROUP_BY(...fields: string[]): GroupBy', () => {
-  describe('one field', () => {
-    it('return GroupBy', () => {
-      const result = GROUP_BY('id')
+describe('GROUP_BY', () => {
+  test('one field', () => {
+    const result = GROUP_BY('id')
 
-      expect(result).toBeInstanceOf(GroupBy)
-      expect(`${result}`).toBe('GROUP BY id')
-    })
+    expect(result).toBe('GROUP BY id')
   })
 
-  describe('more than one field', () => {
+  test('more than one field', () => {
     const result = GROUP_BY('id1', 'id2')
 
-    expect(result).toBeInstanceOf(GroupBy)
-    expect(`${result}`).toBe('GROUP BY id1, id2')
+    expect(result).toBe('GROUP BY id1, id2')
   })
 
-  it('ignore falsy', () => {
+  test('ignore falsy', () => {
     const result = GROUP_BY('id1', null, 'id2')
 
-    expect(result).toBeInstanceOf(GroupBy)
-    expect(`${result}`).toBe('GROUP BY id1, id2')
+    expect(result).toBe('GROUP BY id1, id2')
   })
 })

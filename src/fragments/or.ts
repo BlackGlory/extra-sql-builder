@@ -1,19 +1,8 @@
-import { assert } from '@blackglory/errors'
-import { isntEmptyString } from '@utils'
-import { FragmentBase } from './fragment-base'
+import { assert } from '@blackglory/prelude'
+import { isntEmptyString } from '@src/utils'
 
-export function OR(condition: string): Or {
-  return new Or(condition)
-}
+export function OR(condition: string): string {
+  assert(isntEmptyString(condition), 'condition should not be an empty string')
 
-export class Or extends FragmentBase {
-  constructor(public condition: string) {
-    super()
-  }
-
-  build() {
-    assert(isntEmptyString(this.condition), 'condition should not be an empty string')
-
-    return `OR ${this.condition}`
-  }
+  return `OR ${condition}`
 }

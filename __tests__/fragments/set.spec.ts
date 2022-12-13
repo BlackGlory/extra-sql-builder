@@ -1,21 +1,15 @@
-import { SET, Set } from '@fragments/set'
+import { SET } from '@fragments/set'
 
-describe('SET(...statments: string[]): Set', () => {
-  describe('one statement', () => {
-    it('return Set', () => {
-      const result = SET(`id = 'id'`)
+describe('SET', () => {
+  test('one statement', () => {
+    const result = SET(`id = 'id'`)
 
-      expect(result).toBeInstanceOf(Set)
-      expect(`${result}`).toBe(`SET id = 'id'`)
-    })
+    expect(result).toBe(`SET id = 'id'`)
   })
 
-  describe('more than one statement', () => {
-    it('return Set', () => {
-      const result = SET(`id1 = 'id1'`, `id2 = 'id2'`)
+  test('more than one statement', () => {
+    const result = SET(`id1 = 'id1'`, `id2 = 'id2'`)
 
-      expect(result).toBeInstanceOf(Set)
-      expect(`${result}`).toBe(`SET id1 = 'id1', id2 = 'id2'`)
-    })
+    expect(result).toBe(`SET id1 = 'id1', id2 = 'id2'`)
   })
 })

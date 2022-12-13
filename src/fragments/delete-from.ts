@@ -1,19 +1,8 @@
-import { isntEmptyString } from '@utils'
-import { assert } from '@blackglory/errors'
-import { FragmentBase } from './fragment-base'
+import { isntEmptyString } from '@src/utils'
+import { assert } from '@blackglory/prelude'
 
-export function DELETE_FROM(table: string): DeleteFrom {
-  return new DeleteFrom(table)
-}
+export function DELETE_FROM(table: string): string {
+  assert(isntEmptyString(table), 'table should not be an empty string')
 
-export class DeleteFrom extends FragmentBase {
-  constructor(public table: string) {
-    super()
-  }
-
-  build() {
-    assert(isntEmptyString(this.table), 'table should not be an empty string')
-
-    return `DELETE FROM ${this.table}`
-  }
+  return `DELETE FROM ${table}`
 }

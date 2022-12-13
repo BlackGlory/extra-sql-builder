@@ -1,19 +1,8 @@
-import { assert } from '@blackglory/errors'
-import { isntEmptyString } from '@utils'
-import { FragmentBase } from './fragment-base'
+import { assert } from '@blackglory/prelude'
+import { isntEmptyString } from '@src/utils'
 
-export function UPDATE(table: string): Update {
-  return new Update(table)
-}
+export function UPDATE(table: string): string {
+  assert(isntEmptyString(table), 'table should not be an empty string')
 
-export class Update extends FragmentBase {
-  constructor(public table: string) {
-    super()
-  }
-
-  build() {
-    assert(isntEmptyString(this.table), 'table should not be an empty string')
-
-    return `UPDATE ${this.table}`
-  }
+  return `UPDATE ${table}`
 }

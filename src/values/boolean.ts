@@ -1,4 +1,4 @@
-import { isNull, isUndefined } from '@blackglory/types'
+import { isNull, isUndefined } from '@blackglory/prelude'
 
 export function boolean(val: boolean): string {
   return val ? '1' : '0'

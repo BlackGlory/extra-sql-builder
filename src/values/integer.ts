@@ -1,5 +1,5 @@
-import { isNull, isUndefined } from '@blackglory/types'
-import { assert } from '@blackglory/errors'
+import { isNull, isUndefined } from '@blackglory/prelude'
+import { assert } from '@blackglory/prelude'
 
 export function integer(val: number): string {
   assert(Number.isInteger(val), 'The passed value should be a integer')

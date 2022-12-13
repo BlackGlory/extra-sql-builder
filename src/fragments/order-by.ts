@@ -1,22 +1,11 @@
-import { assert } from '@blackglory/errors'
-import { isntEmptyArray, isntEmptyString } from '@utils'
-import { isntFalsy } from '@blackglory/types'
-import { FragmentBase } from './fragment-base'
-import { Falsy } from 'justypes'
+import { assert, isntFalsy, Falsy } from '@blackglory/prelude'
+import { isntEmptyArray, isntEmptyString } from '@src/utils'
 
-export function ORDER_BY(...fields: Array<string | Falsy>): OrderBy {
-  return new OrderBy(fields.filter(isntFalsy))
-}
+export function ORDER_BY(...fields: Array<string | Falsy>): string {
+  const truhtyFields = fields.filter(isntFalsy)
 
-export class OrderBy extends FragmentBase {
-  constructor(public fields: string[]) {
-    super()
-  }
+  assert(isntEmptyArray(truhtyFields), 'fields should not be empty')
+  assert(truhtyFields.every(isntEmptyString), 'fields should not contain empty strings')
 
-  build() {
-    assert(isntEmptyArray(this.fields), 'fields should not be empty')
-    assert(this.fields.every(isntEmptyString), 'fields should not contain empty strings')
-
-    return `ORDER BY ${this.fields.join(', ')}`
-  }
+  return `ORDER BY ${truhtyFields.join(', ')}`
 }

@@ -1,5 +1,5 @@
-import { isArray, isntFalsy, isString } from '@blackglory/types'
-import { Falsy } from 'justypes'
+import { isArray, isntFalsy, isString } from '@blackglory/prelude'
+import { Falsy } from '@blackglory/prelude'
 import { removeFalsyValues, dedent } from 'extra-tags'
 
 export function sql(...fragments: Array<string | Falsy>): string

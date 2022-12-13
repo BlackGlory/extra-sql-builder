@@ -1,19 +1,8 @@
-import { assert } from '@blackglory/errors'
-import { isntEmptyString } from '@utils'
-import { FragmentBase } from './fragment-base'
+import { assert } from '@blackglory/prelude'
+import { isntEmptyString } from '@src/utils'
 
-export function LEFT_OUTER_JOIN(table: string): LeftOuterJoin {
-  return new LeftOuterJoin(table)
-}
+export function LEFT_OUTER_JOIN(table: string): string {
+  assert(isntEmptyString(table), 'table should not be an emtpy string')
 
-export class LeftOuterJoin extends FragmentBase {
-  constructor(public table: string) {
-    super()
-  }
-
-  build() {
-    assert(isntEmptyString(this.table), 'table should not be an emtpy string')
-
-    return `LEFT OUTER JOIN ${this.table}`
-  }
+  return `LEFT OUTER JOIN ${table}`
 }

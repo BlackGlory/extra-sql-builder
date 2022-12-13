@@ -1,10 +1,7 @@
-import { DELETE_FROM, DeleteFrom } from '@fragments/delete-from'
+import { DELETE_FROM } from '@fragments/delete-from'
 
-describe('DELETE_FROM(table: string) => DeleteFrom', () => {
-  it('return DeleteFrom', () => {
-    const result = DELETE_FROM('my_table')
+test('DELETE_FROM', () => {
+  const result = DELETE_FROM('my_table')
 
-    expect(result).toBeInstanceOf(DeleteFrom)
-    expect(`${result}`).toBe('DELETE FROM my_table')
-  })
+  expect(result).toBe('DELETE FROM my_table')
 })

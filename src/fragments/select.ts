@@ -1,22 +1,11 @@
-import { assert } from '@blackglory/errors'
-import { isntEmptyArray, isntEmptyString } from '@utils'
-import { isntFalsy } from '@blackglory/types'
-import { FragmentBase } from './fragment-base'
-import { Falsy } from 'justypes'
+import { assert, isntFalsy, Falsy } from '@blackglory/prelude'
+import { isntEmptyArray, isntEmptyString } from '@src/utils'
 
-export function SELECT(...fields: Array<string | Falsy>): Select {
-  return new Select(fields.filter(isntFalsy))
-}
+export function SELECT(...fields: Array<string | Falsy>): string {
+  const truthyFields = fields.filter(isntFalsy)
 
-export class Select extends FragmentBase {
-  constructor(public fields: string[]) {
-    super()
-  }
+  assert(isntEmptyArray(truthyFields), 'fields should not be empty')
+  assert(truthyFields.every(isntEmptyString), 'fields should not contain empty strings')
 
-  build() {
-    assert(isntEmptyArray(this.fields), 'fields should not be empty')
-    assert(this.fields.every(isntEmptyString), 'fields should not contain empty strings')
-
-    return `SELECT ${this.fields.join(', ')}`
-  }
+  return `SELECT ${truthyFields.join(', ')}`
 }
