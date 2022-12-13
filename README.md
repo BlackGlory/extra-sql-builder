@@ -14,8 +14,6 @@ It is hard to create SQL statements programmatically:
 
 ## Usage
 ```ts
-import { INSERT_INTO, VALUES, text, sql } from 'extra-sql-builder'
-
 // INSERT INTO my_table (id, value)
 // VALUES (1, 'hello'), (2, 'world');
 
@@ -24,8 +22,8 @@ const cond = true
 const result1 = sql(
   INSERT_INTO('my_table', ['id', 'value'])
 , VALUES(
-    ['1', text('hello')],
-    cond && ['2', text('world')]
+    [integer(1), text('hello')],
+    cond && [integer(2), text('world')]
   )
 )
 
@@ -33,8 +31,8 @@ const result1 = sql(
 const result2 = sql(
  'INSERT INTO my_table (id, value)'
 , VALUES(
-    ['1', text('hello')]
-  , cond && ['2', text('world')]
+    [integer('1'), text('hello')]
+  , cond && [integer('2'), text('world')]
   )
 )
 
@@ -49,15 +47,15 @@ const result3 = sql`
 const result4 = `
   INSERT INTO my_table (id, value)
   ${VALUES(
-    ['1', text('hello')]
-  , cond && ['2', text('world')]
+    [integer('1'), text('hello')]
+  , cond && [integer('2'), text('world')]
   )};
 `
 
 // or
-const values = VALUES(['1', text('hello')])
+const values = VALUES([integer('1'), text('hello')])
 if (cond) {
-  values.values.push(['2', text('world')])
+  values.values.push([integer('2'), text('world')])
 }
 
 const result5 = `
