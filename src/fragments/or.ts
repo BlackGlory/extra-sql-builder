@@ -1,6 +1,6 @@
 import { assert } from '@blackglory/errors'
 import { isntEmptyString } from '@utils'
-import { FragmentBase } from '@fragment-base'
+import { FragmentBase } from './fragment-base'
 
 export function OR(condition: string): Or {
   return new Or(condition)

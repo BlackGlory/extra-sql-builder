@@ -10,7 +10,6 @@
   , "paths": {
       "@src/*": ["src/*"]
     , "@values/*": ["src/values/*"]
-    , "@fragment-base": ["src/fragment-base"]
     , "@fragments/*": ["src/fragments/*"]
     , "@utils": ["src/utils"]
     , "@test/*": ["__tests__/*"]

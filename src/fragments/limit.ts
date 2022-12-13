@@ -1,6 +1,6 @@
 import { assert } from '@blackglory/errors'
 import { isntNegative } from '@utils'
-import { FragmentBase } from '@fragment-base'
+import { FragmentBase } from './fragment-base'
 
 export function LIMIT(limit: number): Limit {
   return new Limit(limit)

@@ -1,6 +1,6 @@
 import { assert } from '@blackglory/errors'
 import { isntEmptyArray, isntEmptyString } from '@utils'
-import { FragmentBase } from '@fragment-base'
+import { FragmentBase } from './fragment-base'
 
 export function SET(...statements: string[]): Set {
   return new Set(statements)

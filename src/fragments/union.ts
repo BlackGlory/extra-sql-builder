@@ -1,4 +1,4 @@
-import { FragmentBase } from '@fragment-base'
+import { FragmentBase } from './fragment-base'
 
 export function UNION(all: unknown = false): Union {
   return new Union(!!all)

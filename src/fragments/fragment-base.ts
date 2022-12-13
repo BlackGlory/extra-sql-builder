@@ -1,7 +1,7 @@
 export abstract class FragmentBase {
   disabled: boolean = false
 
-  private [Symbol.toPrimitive](hint: string) {
+  ;[Symbol.toPrimitive](hint: string) {
     if (hint === 'string') {
       if (this.disabled) {
         return ''
