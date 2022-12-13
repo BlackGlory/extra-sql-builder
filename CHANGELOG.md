@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0](https://github.com/BlackGlory/extra-sql-builder/compare/v0.2.12...v0.3.0) (2022-12-13)
+
+
+### ⚠ BREAKING CHANGES
+
+* The return values of fragments changed
+
+### Features
+
+* add `ParameterCollect` ([aa8b845](https://github.com/BlackGlory/extra-sql-builder/commit/aa8b84587172cb98b6acd3387b02549db8b2ed0c))
+* add `ParameterCollector#toArray` ([2916b74](https://github.com/BlackGlory/extra-sql-builder/commit/2916b7467dca6e642dda269920ed0249ee5aa2f0))
+
+
+* rewrite fragments ([00840b2](https://github.com/BlackGlory/extra-sql-builder/commit/00840b2adae78726e060a34b87a3d13179a44f9e))
+
 ### [0.2.12](https://github.com/BlackGlory/extra-sql-builder/compare/v0.2.11...v0.2.12) (2022-12-12)
 
 ### [0.2.11](https://github.com/BlackGlory/extra-sql-builder/compare/v0.2.10...v0.2.11) (2022-08-10)
