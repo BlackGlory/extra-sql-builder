@@ -1,3 +1,4 @@
+export * from '@src/parameter-collector'
 export * from '@src/sql'
 
 export { AND } from '@fragments/and'
