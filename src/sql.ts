@@ -6,6 +6,7 @@ export function sql(strings: TemplateStringsArray, ...values: unknown[]): string
 export function sql(...args: unknown[]): string {
   if (isTemplateStringArray(args[0])) {
     const [strings, ...values] = args
+
     return dedent(...filter(isntFalsy, strings, ...values))
   } else {
     return `${args.filter(isntFalsy).join('\n')};`
@@ -13,5 +14,6 @@ export function sql(...args: unknown[]): string {
 }
 
 function isTemplateStringArray(val: unknown): val is TemplateStringsArray {
-  return isArray(val) && val.every(isString)
+  return isArray(val)
+      && val.every(isString)
 }

@@ -3,7 +3,6 @@ import { isntEmptyArray, isntEmptyString } from '@src/utils'
 
 export function VALUES<T extends string[] | Falsy>(...values: [T, ...T[]]): string {
   const truthyValues = values.filter(isntFalsy)
-
   assert(isntEmptyArray(truthyValues), 'values should not be empty')
   assert(truthyValues.every(isntEmptyArray), 'values should not contain empty arrays')
   assert(
