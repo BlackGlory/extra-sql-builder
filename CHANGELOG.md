@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.3](https://github.com/BlackGlory/extra-sql-builder/compare/v0.3.2...v0.3.3) (2026-02-13)
+
+
+### Features
+
+* **set:** add falsy value support for statements ([8aa03bc](https://github.com/BlackGlory/extra-sql-builder/commit/8aa03bcf434b2cdd5b3c3077765ae195dd8b4d39))
+
+
+### Bug Fixes
+
+* **offset, limit:** error messages ([ef20349](https://github.com/BlackGlory/extra-sql-builder/commit/ef20349d4c8ce001135a65c3458ffde9560bad93))
+
 ### [0.3.2](https://github.com/BlackGlory/extra-sql-builder/compare/v0.3.1...v0.3.2) (2023-06-11)
 
 
