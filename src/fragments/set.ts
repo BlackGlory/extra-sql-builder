@@ -1,9 +1,11 @@
-import { assert } from '@blackglory/prelude'
+import { assert, Falsy, isntFalsy } from '@blackglory/prelude'
 import { isntEmptyArray, isntEmptyString } from '@src/utils'
 
-export function SET(...statements: string[]): string {
-  assert(isntEmptyArray(statements), 'statements should not be empty')
-  assert(statements.every(isntEmptyString), 'statements should not contain empty strings')
+export function SET(...statements: Array<string | Falsy>): string {
+  const truthyStatements = statements.filter(isntFalsy)
 
-  return `SET ${statements.join(', ')}`
+  assert(isntEmptyArray(statements), 'statements should not be empty')
+  assert(truthyStatements.every(isntEmptyString), 'statements should not contain empty strings')
+
+  return `SET ${truthyStatements.join(', ')}`
 }

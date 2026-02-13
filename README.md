@@ -157,7 +157,7 @@ function OR(condition: string): string
 function ORDER_BY(...fields: Array<string | Falsy>): string
 function RIGHT_OUTER_JOIN(table: string): string
 function SELECT(...fields: Array<string | Falsy>): string
-function SET(...statements: string[]): string
+function SET(...statements: Array<string | Falsy>): string
 function UNION(all: unknown = false): string
 function UPDATE(table: string): string
 function VALUES<T extends string[] | Falsy>(...values: [T, ...T[]]): string
