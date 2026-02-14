@@ -9,7 +9,10 @@ export function sql(...args: unknown[]): string {
 
     return dedent(...filter(isntFalsy, strings, ...values))
   } else {
-    return `${args.filter(isntFalsy).join('\n')};`
+    const fragments = args
+
+    // 添加分号是刻意为之的, 因为fragments没有机会添加分号.
+    return `${fragments.filter(isntFalsy).join('\n')};`
   }
 }
 
