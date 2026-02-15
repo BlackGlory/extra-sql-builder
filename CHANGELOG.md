@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.4](https://github.com/BlackGlory/extra-sql-builder/compare/v0.3.3...v0.3.4) (2026-02-15)
+
+
+### Bug Fixes
+
+* **set:** assertions ([5f12620](https://github.com/BlackGlory/extra-sql-builder/commit/5f12620dfff118fcfa6b1dde5f1a809187ee68cb))
+
 ### [0.3.3](https://github.com/BlackGlory/extra-sql-builder/compare/v0.3.2...v0.3.3) (2026-02-13)
 
 
