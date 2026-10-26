@@ -1,4 +1,5 @@
-import { HAVING } from '@fragments/having'
+import { test, expect } from 'vitest'
+import { HAVING } from '@fragments/having.js'
 
 test('HAVING', () => {
   const result = HAVING(`id = 'id'`)

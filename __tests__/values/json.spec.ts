@@ -1,4 +1,5 @@
-import { json, nullableJson } from '@values/json'
+import { describe, it, expect } from 'vitest'
+import { json, nullableJson } from '@values/json.js'
 
 describe('json', () => {
   it('returns string', () => {

@@ -1,5 +1,5 @@
 import { isNullish, Nullable } from '@blackglory/prelude'
-import { text } from '@values/text'
+import { text } from '@values/text.js'
 
 export function json(val: object): string {
   return text(JSON.stringify(val))

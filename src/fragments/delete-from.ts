@@ -1,4 +1,4 @@
-import { isntEmptyString } from '@src/utils'
+import { isntEmptyString } from '@src/utils.js'
 import { assert } from '@blackglory/prelude'
 
 export function DELETE_FROM(table: string): string {

@@ -1,4 +1,5 @@
-import { INSERT_INTO } from '@fragments/insert-into'
+import { describe, test, expect } from 'vitest'
+import { INSERT_INTO } from '@fragments/insert-into.js'
 
 describe('INSERT_INTO', () => {
   test('one field', () => {

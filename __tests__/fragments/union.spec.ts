@@ -1,4 +1,5 @@
-import { UNION } from '@fragments/union'
+import { describe, test, expect } from 'vitest'
+import { UNION } from '@fragments/union.js'
 
 describe('UNION', () => {
   test('all = true', () => {

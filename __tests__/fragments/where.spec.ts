@@ -1,4 +1,5 @@
-import { WHERE } from '@fragments/where'
+import { test, expect } from 'vitest'
+import { WHERE } from '@fragments/where.js'
 
 test('WHERE', () => {
   const result = WHERE(`id = 'id'`)

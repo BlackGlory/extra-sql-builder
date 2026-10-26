@@ -1,4 +1,5 @@
-import { DELETE_FROM } from '@fragments/delete-from'
+import { test, expect } from 'vitest'
+import { DELETE_FROM } from '@fragments/delete-from.js'
 
 test('DELETE_FROM', () => {
   const result = DELETE_FROM('my_table')

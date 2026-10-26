@@ -1,4 +1,5 @@
-import { FROM } from '@fragments/from'
+import { describe, test, expect } from 'vitest'
+import { FROM } from '@fragments/from.js'
 
 describe('FROM', () => {
   test('one table', () => {

@@ -1,4 +1,5 @@
-import { text, nullableText } from '@values/text'
+import { describe, it, expect } from 'vitest'
+import { text, nullableText } from '@values/text.js'
 
 describe('text', () => {
   describe('text without single quote', () => {

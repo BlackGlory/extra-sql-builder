@@ -1,4 +1,5 @@
-import { OR } from '@fragments/or'
+import { test, expect } from 'vitest'
+import { OR } from '@fragments/or.js'
 
 test('OR', () => {
   const result = OR(`id = 'id'`)

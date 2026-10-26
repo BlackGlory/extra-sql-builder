@@ -1,4 +1,5 @@
-import { SET } from '@fragments/set'
+import { describe, test, expect } from 'vitest'
+import { SET } from '@fragments/set.js'
 
 describe('SET', () => {
   test('one statement', () => {

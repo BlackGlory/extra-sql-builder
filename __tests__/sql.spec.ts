@@ -1,4 +1,5 @@
-import { sql } from '@src/sql'
+import { describe, it, expect } from 'vitest'
+import { sql } from '@src/sql.js'
 
 describe('sql', () => {
   describe('as a function', () => {

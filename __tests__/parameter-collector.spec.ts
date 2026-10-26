@@ -1,4 +1,5 @@
-import { ParameterCollector } from '@src/parameter-collector'
+import { describe, test, expect } from 'vitest'
+import { ParameterCollector } from '@src/parameter-collector.js'
 
 describe('ParameterCollector', () => {
   test('add', () => {

@@ -1,4 +1,5 @@
-import { SELECT } from '@fragments/select'
+import { describe, test, expect } from 'vitest'
+import { SELECT } from '@fragments/select.js'
 
 describe('SELECT', () => {
   test('one field', () => {

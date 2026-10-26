@@ -1,5 +1,5 @@
-import { assert, isntFalsy, Falsy } from '@blackglory/prelude'
-import { isntEmptyArray, isntEmptyString } from '@src/utils'
+import { assert, isntFalsy, Falsy, isntEmptyArray } from '@blackglory/prelude'
+import { isntEmptyString } from '@src/utils.js'
 
 export function INSERT_INTO(table: string, fields: Array<string | Falsy>): string {
   assert(isntEmptyString(table), 'table should not be an empty string')

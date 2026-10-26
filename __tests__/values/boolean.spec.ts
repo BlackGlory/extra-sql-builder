@@ -1,4 +1,5 @@
-import { boolean, nullableBoolean } from '@values/boolean'
+import { describe, it, expect } from 'vitest'
+import { boolean, nullableBoolean } from '@values/boolean.js'
 
 describe('boolean', () => {
   describe('true', () => {

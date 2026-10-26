@@ -1,4 +1,5 @@
-import { OFFSET } from '@fragments/offset'
+import { test, expect } from 'vitest'
+import { OFFSET } from '@fragments/offset.js'
 
 test('OFFSET', () => {
   const result = OFFSET(10)

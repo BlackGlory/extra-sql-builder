@@ -1,5 +1,5 @@
-import { assert, isntFalsy, Falsy } from '@blackglory/prelude'
-import { isntEmptyArray, isntEmptyString } from '@src/utils'
+import { assert, isntFalsy, Falsy, isntEmptyArray } from '@blackglory/prelude'
+import { isntEmptyString } from '@src/utils.js'
 
 export function VALUES<T extends string[] | Falsy>(...values: [T, ...T[]]): string {
   const truthyValues = values.filter(isntFalsy)

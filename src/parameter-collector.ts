@@ -1,5 +1,3 @@
-import fromPairs from 'lodash/fromPairs'
-
 export class ParameterCollector<T> {
   private values: T[] = []
 
@@ -11,8 +9,10 @@ export class ParameterCollector<T> {
   }
 
   toRecord(): Record<string, T> {
-    const entries = this.values.map((x, i) => [this.createKey(i + 1), x])
-    return fromPairs(entries)
+    const entries = this.values
+      .map((value, i) => [this.createKey(i + 1), value])
+
+    return Object.fromEntries(entries)
   }
 
   toArray(): T[] {

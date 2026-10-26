@@ -1,5 +1,5 @@
-import { assert, Falsy, isntFalsy } from '@blackglory/prelude'
-import { isntEmptyArray, isntEmptyString } from '@src/utils'
+import { assert, Falsy, isntEmptyArray, isntFalsy } from '@blackglory/prelude'
+import { isntEmptyString } from '@src/utils.js'
 
 export function GROUP_BY(...fields: Array<string | Falsy>): string {
   const truthyFields = fields.filter(isntFalsy)

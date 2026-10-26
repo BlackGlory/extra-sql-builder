@@ -1,4 +1,5 @@
-import { LEFT_OUTER_JOIN } from '@fragments/left-outer-join'
+import { test, expect } from 'vitest'
+import { LEFT_OUTER_JOIN } from '@fragments/left-outer-join.js'
 
 test('LEFT_OUTER_JOIN', () => {
   const result = LEFT_OUTER_JOIN('my_table')

@@ -1,4 +1,5 @@
-import { FULL_OUTER_JOIN } from '@fragments/full-outer-join'
+import { test, expect } from 'vitest'
+import { FULL_OUTER_JOIN } from '@fragments/full-outer-join.js'
 
 test('FULL_OUTER_JOIN', () => {
   const result = FULL_OUTER_JOIN('my_table')

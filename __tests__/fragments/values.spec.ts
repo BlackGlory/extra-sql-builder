@@ -1,5 +1,6 @@
-import { text } from '@values/text'
-import { VALUES } from '@fragments/values'
+import { describe, test, expect } from 'vitest'
+import { text } from '@values/text.js'
+import { VALUES } from '@fragments/values.js'
 
 describe('VALUES', () => {
   test('one value', () => {

@@ -1,6 +1,7 @@
+import { describe, it, expect } from 'vitest'
 import { getError } from 'return-style'
 import { AssertionError } from '@blackglory/errors'
-import { integer, nullableInteger } from '@values/integer'
+import { integer, nullableInteger } from '@values/integer.js'
 
 describe('integer', () => {
   describe('is integer', () => {

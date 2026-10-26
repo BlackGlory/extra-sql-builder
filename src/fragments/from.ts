@@ -1,5 +1,5 @@
-import { isntEmptyArray, isntEmptyString } from '@src/utils'
-import { assert, Falsy, isntFalsy } from '@blackglory/prelude'
+import { isntEmptyString } from '@src/utils.js'
+import { assert, Falsy, isntFalsy, isntEmptyArray } from '@blackglory/prelude'
 
 export function FROM(...tables: Array<string | Falsy>): string {
   const truthyTables = tables.filter(isntFalsy)

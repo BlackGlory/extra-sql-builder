@@ -1,4 +1,5 @@
-import { GROUP_BY } from '@fragments/group-by'
+import { describe, test, expect } from 'vitest'
+import { GROUP_BY } from '@fragments/group-by.js'
 
 describe('GROUP_BY', () => {
   test('one field', () => {

@@ -1,4 +1,5 @@
-import { ON } from '@fragments/on'
+import { test, expect } from 'vitest'
+import { ON } from '@fragments/on.js'
 
 test('ON', () => {
   const result = ON(`id = 'id'`)

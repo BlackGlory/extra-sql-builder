@@ -1,4 +1,5 @@
-import { ORDER_BY } from '@fragments/order-by'
+import { describe, test, expect } from 'vitest'
+import { ORDER_BY } from '@fragments/order-by.js'
 
 describe('ORDER_BY', () => {
   test('one field', () => {

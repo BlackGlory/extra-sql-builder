@@ -1,5 +1,5 @@
 import { assert } from '@blackglory/prelude'
-import { isntNegative } from '@src/utils'
+import { isntNegative } from '@src/utils.js'
 
 export function OFFSET(offset: number): string {
   assert(
