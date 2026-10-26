@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.0](https://github.com/BlackGlory/extra-sql-builder/compare/v0.3.4...v0.4.0) (2026-10-26)
+
+
+### ⚠ BREAKING CHANGES
+
+* - CommonJS => ESM
+- ES2018 => ES2020
+- Node.js v14 => Node.js v22
+
+* upgrade dependencies ([be2059f](https://github.com/BlackGlory/extra-sql-builder/commit/be2059f946790f4bd6e6c93fb2d6e7fe9886782d))
+
 ### [0.3.4](https://github.com/BlackGlory/extra-sql-builder/compare/v0.3.3...v0.3.4) (2026-02-15)
 
 
